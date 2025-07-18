@@ -1,1 +1,1 @@
-wget -qO- https://raw.githubusercontent.com/saullbrandao/omarchy-overrides/master/override.sh | bash
+wget -qO- https://raw.githubusercontent.com/saullbrandao/omarchy-overrides/refs/heads/master/boot.sh | bash
