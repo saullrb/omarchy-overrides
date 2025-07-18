@@ -1,0 +1,32 @@
+#!/bin/bash
+
+~/.local/share/omarchy/omarchy-update "$@"
+
+REPO_DIR="$HOME/.local/share/omarchy-overrides"
+INSTALL_DIR="$REPO_DIR/install"
+CONFIG_DIR="$REPO_DIR/config"
+
+# Pull latest overrides
+cd "$REPO_DIR"
+git pull
+
+# Run install scripts
+for script in "$INSTALL_DIR"/*.sh; do
+  [ -f "$script" ] && bash "$script"
+done
+
+# Ensure hypr config is sourced
+grep -qxF 'source = ~/.config/hypr/custom.conf' ~/.config/hypr/hypr.conf ||
+  echo 'source = ~/.config/hypr/custom.conf' >>~/.config/hypr/hypr.conf
+
+# Copy configs
+for dir in "$CONFIG_DIR"/*/; do
+  dir_name=$(basename "$dir")
+  mkdir -p "$HOME/.config/$dir_name"
+  cp -r "$dir"* "$HOME/.config/$dir_name/"
+done
+
+# Back to where we came from
+cd - >/dev/null
+
+echo -e "\e[32mOverrides updated.\e[0m"
