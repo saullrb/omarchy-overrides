@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Collect all subdirs + individual paths
+PROJECTS=$(
+  find "$HOME/projects" -mindepth 1 -maxdepth 1 -type d 2>/dev/null
+  echo "$HOME/.local/share/omarchy"
+)
+
+# Fuzzy pick
+cd "$(echo "$PROJECTS" | fzf --prompt="Pick project: ")" || exit
+
+# Session name from folder
+SESSION_NAME=$(basename "$PWD")
+
+zellij attach --create "$SESSION_NAME"

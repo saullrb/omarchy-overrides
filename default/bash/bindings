@@ -1,0 +1,2 @@
+bind '"\C-f":"zellij-sessionizer\n"'
+

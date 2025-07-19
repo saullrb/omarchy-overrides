@@ -1,4 +1,5 @@
 source ~/.local/share/omarchy-overrides/default/bash/aliases
+source ~/.local/share/omarchy-overrides/default/bash/bindings
 
 export PATH="$HOME/.local/share/omarchy-overrides/bin:$PATH"
 
