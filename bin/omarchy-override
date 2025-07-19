@@ -13,8 +13,10 @@ else
   last_updated_at=$(git log -1 --format=%cd --date=unix)
 fi
 
-# Pull latest overrides
+# Get the latest while trying to preserve any modifications
+git stash
 git pull
+git stash pop
 
 # Run pending migrations
 for file in migrations/*.sh; do
