@@ -16,8 +16,8 @@ for script in "$INSTALL_DIR"/*.sh; do
 done
 
 # Ensure hypr config is sourced
-grep -qxF 'source = ~/.config/hypr/custom.conf' ~/.config/hypr/hypr.conf ||
-  echo 'source = ~/.config/hypr/custom.conf' >>~/.config/hypr/hypr.conf
+grep -qxF 'source = ~/.config/hypr/custom.conf' ~/.config/hypr/hyprland.conf ||
+  echo 'source = ~/.config/hypr/custom.conf' >>~/.config/hypr/hyprland.conf
 
 # Copy configs
 for dir in "$CONFIG_DIR"/*/; do

@@ -34,8 +34,8 @@ for dir in "$CONFIG_DIR"/*/; do
 done
 
 # Add custom hypr config
-grep -qxF 'source = ~/.config/hypr/custom.conf' ~/.config/hypr/hypr.conf ||
-  echo 'source = ~/.config/hypr/custom.conf' >>~/.config/hypr/hypr.conf
+grep -qxF 'source = ~/.config/hypr/custom.conf' ~/.config/hypr/hyprland.conf ||
+  echo 'source = ~/.config/hypr/custom.conf' >>~/.config/hypr/hyprland.conf
 
 # Add custom bash config
 grep -qxF 'source ~/.local/share/omarchy-overrides/default/bash/custom' ~/.bashrc ||
