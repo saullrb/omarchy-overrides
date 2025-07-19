@@ -41,5 +41,3 @@ if command -v obsidian &>/dev/null; then
   echo "Removing Obsidian..."
   yay -Rns --noconfirm obsidian-bin
 fi
-
-cp ~/.local/share/omarchy-overrides/config/hypr/custom.conf ~/.config/hypr/

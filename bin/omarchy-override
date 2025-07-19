@@ -30,8 +30,8 @@ for file in migrations/*.sh; do
 done
 
 # Ensure custom hyprland config is sourced
-grep -qxF 'source = ~/.config/hypr/custom.conf' ~/.config/hypr/hyprland.conf ||
-  echo 'source = ~/.config/hypr/custom.conf' >>~/.config/hypr/hyprland.conf
+grep -qxF 'source = ~/.local/share/omarchy-overrides/default/hypr/custom.conf' ~/.config/hypr/hyprland.conf ||
+  echo 'source = ~/.local/share/omarchy-overrides/default/hypr/custom.conf' >>~/.config/hypr/hyprland.conf
 
 # Back to where we came from
 cd - >/dev/null
