@@ -22,9 +22,6 @@ for migration in "$MIGRATIONS_DIR"/*.sh; do
   fi
 done
 
-# Add symlinks to the configs
-exec ~/.local/share/omarchy-overrides/bin/omarchy-symlinks
-
 # Add custom hypr config
 HYPR_CUSTOM="source = $REPO_DIR/default/hypr/custom.conf"
 grep -qxF "$HYPR_CUSTOM" ~/.config/hypr/hyprland.conf ||
@@ -34,5 +31,8 @@ grep -qxF "$HYPR_CUSTOM" ~/.config/hypr/hyprland.conf ||
 BASH_CUSTOM="source $REPO_DIR/default/bash/custom"
 grep -qxF "$BASH_CUSTOM" ~/.bashrc ||
   echo "$BASH_CUSTOM" >>~/.bashrc
+
+# Add symlinks to the configs
+"$REPO_DIR/bin/omarchy-symlinks"
 
 echo "All done!"
