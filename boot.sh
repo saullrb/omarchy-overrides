@@ -6,8 +6,6 @@ REPO_DIR="$HOME/.local/share/omarchy-overrides"
 INSTALL_DIR="$REPO_DIR/install"
 CONFIG_DIR="$REPO_DIR/config"
 
-bash -c "$(wget -qO- https://omarchy.org/install)"
-
 if [ -d "$REPO_DIR/.git" ]; then
   echo "Updating System Setup..."
   git -C "$REPO_DIR" pull --quiet
