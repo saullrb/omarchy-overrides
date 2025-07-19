@@ -8,7 +8,6 @@ web2app-remove "Google Messages" 2>/dev/null
 web2app-remove "Google Photos" 2>/dev/null
 web2app-remove "HEY" 2>/dev/null
 web2app-remove "X" 2>/dev/null
-web2app-remove "YouTube" 2>/dev/null
 
 if command -v spotify &>/dev/null; then
   echo "Replacing Spotify with Youtube Music webapp..."
