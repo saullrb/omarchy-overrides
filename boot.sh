@@ -3,7 +3,7 @@ set -e
 
 REPO_URL="https://github.com/saullbrandao/omarchy-overrides.git"
 REPO_DIR="$HOME/.local/share/omarchy-overrides"
-INSTALL_DIR="$REPO_DIR/install"
+MIGRATIONS_DIR="$REPO_DIR/migrations"
 CONFIG_DIR="$REPO_DIR/config"
 
 if [ -d "$REPO_DIR/.git" ]; then
@@ -14,12 +14,11 @@ else
   git clone "$REPO_URL" "$REPO_DIR" >/dev/null
 fi
 
-# Run all scripts in install directory
-echo "Installing programs..."
-for script in "$INSTALL_DIR"/*.sh; do
-  if [ -f "$script" ]; then
-    echo "Executing $script..."
-    bash "$script"
+# Run all migrations
+for migration in "$MIGRATIONS_DIR"/*.sh; do
+  if [ -f "$migration" ]; then
+    echo "Running migration $migration..."
+    bash "$migration"
   fi
 done
 
