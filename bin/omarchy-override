@@ -1,30 +1,35 @@
 #!/bin/bash
 
+# Run omarchy-update first
 ~/.local/share/omarchy/bin/omarchy-update "$@"
 
-REPO_DIR="$HOME/.local/share/omarchy-overrides"
-INSTALL_DIR="$REPO_DIR/install"
-CONFIG_DIR="$REPO_DIR/config"
+cd ~/.local/share/omarchy-overrides
+
+if [[ $1 == "all" ]]; then
+  # Run all migrations
+  last_updated_at=1
+else
+  # Remember the version we're at before upgrading
+  last_updated_at=$(git log -1 --format=%cd --date=unix)
+fi
 
 # Pull latest overrides
-cd "$REPO_DIR"
 git pull
 
-# Run install scripts
-for script in "$INSTALL_DIR"/*.sh; do
-  [ -f "$script" ] && bash "$script"
+# Run pending migrations
+for file in migrations/*.sh; do
+  filename=$(basename "$file")
+  migrate_at="${filename%.sh}"
+
+  if [ $migrate_at -gt $last_updated_at ]; then
+    echo -e "\e[32m\nRunning override migration ($migrate_at)\e[0m"
+    source $file
+  fi
 done
 
-# Ensure hypr config is sourced
+# Ensure custom hyprland config is sourced
 grep -qxF 'source = ~/.config/hypr/custom.conf' ~/.config/hypr/hyprland.conf ||
   echo 'source = ~/.config/hypr/custom.conf' >>~/.config/hypr/hyprland.conf
-
-# Copy configs
-for dir in "$CONFIG_DIR"/*/; do
-  dir_name=$(basename "$dir")
-  mkdir -p "$HOME/.config/$dir_name"
-  cp -r "$dir"* "$HOME/.config/$dir_name/"
-done
 
 # Back to where we came from
 cd - >/dev/null
