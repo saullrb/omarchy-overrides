@@ -1,6 +1,6 @@
 #!/bin/bash
 
-~/.local/share/omarchy/omarchy-update "$@"
+~/.local/share/omarchy/bin/omarchy-update "$@"
 
 REPO_DIR="$HOME/.local/share/omarchy-overrides"
 INSTALL_DIR="$REPO_DIR/install"
