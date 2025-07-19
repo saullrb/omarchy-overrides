@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Run omarchy-update first
-~/.local/share/omarchy/bin/omarchy-update "$@"
+# ~/.local/share/omarchy/bin/omarchy-update "$@"
 
-cd ~/.local/share/omarchy-overrides
+# cd ~/.local/share/omarchy-overrides
 
 if [[ $1 == "all" ]]; then
   # Run all migrations
@@ -14,7 +14,7 @@ else
 fi
 
 # Pull latest overrides
-git pull
+# git pull
 
 # Run pending migrations
 for file in migrations/*.sh; do
@@ -32,6 +32,6 @@ grep -qxF 'source = ~/.config/hypr/custom.conf' ~/.config/hypr/hyprland.conf ||
   echo 'source = ~/.config/hypr/custom.conf' >>~/.config/hypr/hyprland.conf
 
 # Back to where we came from
-cd - >/dev/null
+# cd - >/dev/null
 
 echo -e "\e[32mOverrides updated.\e[0m"
