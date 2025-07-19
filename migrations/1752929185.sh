@@ -16,6 +16,11 @@ if command -v spotify &>/dev/null; then
   web2app "YouTube Music" https://music.youtube.com https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/youtube-music.png
 fi
 
+if command -v op &>/dev/null; then
+  echo "Removing 1password"
+  yay -Rns --noconfirm 1password-cli 1password-beta
+fi
+
 if command -v xournalpp &>/dev/null; then
   echo "Removing Xournal++..."
   yay -Rns --noconfirm xournalpp
