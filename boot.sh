@@ -22,20 +22,8 @@ for migration in "$MIGRATIONS_DIR"/*.sh; do
   fi
 done
 
-echo "Linking configs..."
-for dir in "$CONFIG_DIR"/*/; do
-  if [ -d "$dir" ]; then
-    dir_name=$(basename "$dir")
-    target_dir="$HOME/.config/$dir_name"
-    mkdir -p "$target_dir"
-    for file in "$dir"*; do
-      filename=$(basename "$file")
-      target_file="$target_dir/$filename"
-      [ -e "$target_file" ] && rm -rf "$target_file"
-      ln -s "$file" "$target_file"
-    done
-  fi
-done
+# Add symlinks to the configs
+exec ~/.local/share/omarchy-overrides/bin/omarchy-symlinks
 
 # Add custom hypr config
 HYPR_CUSTOM="source = $REPO_DIR/default/hypr/custom.conf"
