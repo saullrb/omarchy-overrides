@@ -1,3 +1,5 @@
+source ~/.local/share/omarchy-overrides/default/bash/aliases
+
 export PATH="$HOME/.local/share/omarchy-overrides/bin:$PATH"
 
 eval "$(starship init bash)"
