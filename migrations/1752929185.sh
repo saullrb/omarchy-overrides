@@ -15,6 +15,11 @@ if command -v spotify &>/dev/null; then
   web2app "YouTube Music" https://music.youtube.com https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/youtube-music.png
 fi
 
+if [ ! -f "$HOME/.local/share/applications/Discord.desktop" ]; then
+  echo "Adding Discord webapp"
+  web2app Discord https://discord.com/app https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/discord.png
+fi
+
 if command -v op &>/dev/null; then
   echo "Removing 1password"
   yay -Rns --noconfirm 1password-cli 1password-beta
