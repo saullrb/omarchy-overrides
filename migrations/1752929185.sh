@@ -50,3 +50,12 @@ if command -v obsidian &>/dev/null; then
   echo "Removing Obsidian..."
   yay -Rns --noconfirm obsidian-bin
 fi
+
+if command -v zoom &>/dev/null; then
+  echo "Removing zoom..."
+  yay -Rns --noconfirm zoom
+
+  if [ -f "$HOME/.local/share/applications/Zoom.desktop" ]; then
+    rm "$HOME/.local/share/applications/Zoom.desktop"
+  fi
+fi
