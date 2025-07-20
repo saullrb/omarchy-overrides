@@ -46,5 +46,5 @@ end
 
 function refresh-xcompose
     pkill fcitx5
-    setsid fcitx5 &>/dev/null &
+    uwsm app -- fcitx5 >/dev/null 2>&1 &
 end
