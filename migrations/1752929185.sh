@@ -1,6 +1,9 @@
 echo "Removing/Replacing some apps"
 source ~/.local/share/omarchy/default/bash/functions
 
+# Copy my .desktop overrides
+cp ~/.local/share/omarchy-overrides/applications/hidden/*.desktop ~/.local/share/applications/
+
 web2app-remove "Basecamp" 2>/dev/null
 web2app-remove "GitHub" 2>/dev/null
 web2app-remove "Google Contacts" 2>/dev/null
