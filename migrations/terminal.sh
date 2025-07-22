@@ -14,3 +14,4 @@ if ! command -v fish &>/dev/null; then
 
   ~/.local/share/omarchy-overrides/bin/omarchy-symlinks
 fi
+
