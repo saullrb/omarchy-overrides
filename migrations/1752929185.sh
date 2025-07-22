@@ -23,6 +23,11 @@ if [ ! -f "$HOME/.local/share/applications/Discord.desktop" ]; then
   web2app Discord https://discord.com/app https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/discord.png
 fi
 
+if [ -f "$HOME/.local/share/applications/YouTube.desktop" ]; then
+  echo "Removing YouTube webapp"
+  web2app-remove YouTube
+fi
+
 if [ ! -f "$HOME/.local/share/applications/Proton Mail.desktop" ]; then
   echo "Adding Proton Mail webapp"
   web2app 'Proton Mail' https://mail.proton.me https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/proton-mail.png
