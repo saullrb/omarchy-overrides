@@ -48,20 +48,9 @@ if command -v typora &>/dev/null; then
   yay -Rns --noconfirm typora
 fi
 
-if command -v pinta &>/dev/null; then
-  echo "Replacing Pinta with Gimp..."
-  yay -Rns --noconfirm pinta
-  yay -S --noconfirm --needed gimp
-fi
-
 if command -v signal-desktop &>/dev/null; then
   echo "Removing Signal..."
   yay -Rns --noconfirm signal-desktop
-fi
-
-if command -v obsidian &>/dev/null; then
-  echo "Removing Obsidian..."
-  yay -Rns --noconfirm obsidian-bin
 fi
 
 if command -v zoom &>/dev/null; then
