@@ -7,11 +7,3 @@ if ! command -v zellij &>/dev/null; then
   echo "Installing zellij"
   yay -S --noconfirm --needed zellij
 fi
-
-if ! command -v fish &>/dev/null; then
-  echo "Installing fish"
-  yay -S --noconfirm --needed fish
-
-  ~/.local/share/omarchy-overrides/bin/omarchy-symlinks
-fi
-
