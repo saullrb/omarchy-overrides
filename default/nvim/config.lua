@@ -3,6 +3,8 @@ vim.opt.wrap = true
 vim.opt.showbreak = "↪"
 vim.opt.breakindent = true
 
+vim.opt.relativenumber = true
+
 -- Disable the system clipboard integration
 vim.opt.clipboard = ""
 
