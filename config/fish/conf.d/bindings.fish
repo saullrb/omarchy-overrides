@@ -1,1 +1,0 @@
-bind \cf zellij-sessionizer
