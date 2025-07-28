@@ -4,7 +4,7 @@ return {
 		lazy = false,
 
 		opts = {
-			allowed_dirs = { "~/projects/*", "~/.local/share/omarchy/", "~/.local/share/omarchy-overrides/" },
+			allowed_dirs = { "~/projects/*" },
 		},
 	},
 	{
