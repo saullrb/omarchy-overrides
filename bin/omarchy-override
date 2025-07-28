@@ -22,6 +22,10 @@ done
 grep -qxF 'source = ~/.local/share/omarchy-overrides/default/hypr/custom.conf' ~/.config/hypr/hyprland.conf ||
   echo 'source = ~/.local/share/omarchy-overrides/default/hypr/custom.conf' >>~/.config/hypr/hyprland.conf
 
+# Ensure custom bash config is sourced
+grep -qxF 'source ~/.local/share/omarchy-overrides/default/bash/custom' ~/.bashrc ||
+  echo 'source ~/.local/share/omarchy-overrides/default/bash/custom' >>~/.bashrc
+
 # Back to where we came from
 cd - >/dev/null
 
