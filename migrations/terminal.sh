@@ -16,6 +16,6 @@ EOF
 fi
 
 # Add my custom nvim config
-if ! grep -Fq 'dofile(vim.fn.expand("~/.local/share/omarchy-overrides/default/nvim/config.lua"))' ~/.config/nvim/init.lua; then
-  echo 'dofile(vim.fn.expand("~/.local/share/omarchy-overrides/default/nvim/config.lua"))' >>~/.config/nvim/init.lua
+if ! grep -Fq 'dofile(vim.fn.expand("~/.local/share/omarchy-overrides/default/nvim/config.lua"))' ~/.config/nvim/lua/config/options.lua; then
+  echo 'dofile(vim.fn.expand("~/.local/share/omarchy-overrides/default/nvim/config.lua"))' >>~/.config/nvim/lua/config/options.lua
 fi
