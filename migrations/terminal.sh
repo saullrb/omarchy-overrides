@@ -3,7 +3,7 @@ if ! command -v starship &>/dev/null; then
   yay -S --noconfirm --needed starship
 fi
 
-if ! command -v zellij &>/dev/null; then
-  echo "Installing zellij"
-  yay -S --noconfirm --needed zellij
+if ! command -v tmux &>/dev/null; then
+  echo "Installing tmux"
+  yay -S --noconfirm --needed tmux
 fi
