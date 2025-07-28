@@ -1,6 +1,6 @@
 export PATH="$HOME/.local/share/omarchy-overrides/bin:$PATH"
 
-bind '"\C-f":"\C-u tmux-sessionizer\n"'
+bind -x '"\C-f":"project-finder"'
 
 alias ou="omarchy-update"
 alias oo="omarchy-override"

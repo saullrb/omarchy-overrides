@@ -4,7 +4,6 @@ set -e
 REPO_URL="https://github.com/saullbrandao/omarchy-overrides.git"
 REPO_DIR="$HOME/.local/share/omarchy-overrides"
 MIGRATIONS_DIR="$REPO_DIR/migrations"
-CONFIG_DIR="$REPO_DIR/config"
 
 if [ -d "$REPO_DIR/.git" ]; then
   echo "Updating System Setup..."
@@ -31,8 +30,5 @@ grep -qxF "$HYPR_CUSTOM" ~/.config/hypr/hyprland.conf ||
 BASH_CUSTOM="source $REPO_DIR/default/bash/custom"
 grep -qxF "$BASH_CUSTOM" ~/.bashrc ||
   echo "$BASH_CUSTOM" >>~/.bashrc
-
-# Add symlinks to the configs
-"$REPO_DIR/bin/omarchy-symlinks"
 
 echo "All done!"
