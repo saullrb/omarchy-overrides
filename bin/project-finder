@@ -2,26 +2,26 @@
 
 # Define your project search paths
 SEARCH_PATHS=(
-  "$HOME/projects"
+    "$HOME/projects"
 )
 
 declare -A seen
 dirs=()
 
 for path in "${SEARCH_PATHS[@]}"; do
-  [[ -d $path ]] || continue
+    [[ -d $path ]] || continue
 
-  while IFS= read -r dir; do
-    [[ -n "${seen[$dir]}" ]] && continue
-    seen[$dir]=1
-    dirs+=("$dir")
-  done < <(find -L "$path" -mindepth 1 -maxdepth 1 -type d)
+    while IFS= read -r dir; do
+        [[ -n "${seen[$dir]}" ]] && continue
+        seen[$dir]=1
+        dirs+=("$dir")
+    done < <(find -L "$path" -mindepth 1 -maxdepth 1 -type d)
 done
 
 # Launch fzf to select directory
 selected=$(printf '%s\n' "${dirs[@]}" | fzf --height=20% --border --prompt="Projects> ")
 
 if [[ -n $selected ]]; then
-  cd "$selected" || exit
-  exec nvim .
+    cd "$selected" || exit
+    exec nvim .
 fi

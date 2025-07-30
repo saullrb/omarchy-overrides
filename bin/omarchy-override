@@ -11,20 +11,20 @@ git diff --check || git reset --merge
 
 # Run pending migrations
 for file in migrations/*.sh; do
-  filename=$(basename "$file")
-  migrate_at="${filename%.sh}"
+    filename=$(basename "$file")
+    migrate_at="${filename%.sh}"
 
-  echo -e "\e[32m\nRunning override migration ($migrate_at)\e[0m"
-  source $file
+    echo -e "\e[32m\nRunning override migration ($migrate_at)\e[0m"
+    source $file
 done
 
 # Ensure custom hyprland config is sourced
 grep -qxF 'source = ~/.local/share/omarchy-overrides/default/hypr/custom.conf' ~/.config/hypr/hyprland.conf ||
-  echo 'source = ~/.local/share/omarchy-overrides/default/hypr/custom.conf' >>~/.config/hypr/hyprland.conf
+    echo 'source = ~/.local/share/omarchy-overrides/default/hypr/custom.conf' >>~/.config/hypr/hyprland.conf
 
 # Ensure custom bash config is sourced
 grep -qxF 'source ~/.local/share/omarchy-overrides/default/bash/custom' ~/.bashrc ||
-  echo 'source ~/.local/share/omarchy-overrides/default/bash/custom' >>~/.bashrc
+    echo 'source ~/.local/share/omarchy-overrides/default/bash/custom' >>~/.bashrc
 
 # Back to where we came from
 cd - >/dev/null
