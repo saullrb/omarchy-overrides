@@ -17,4 +17,11 @@ return {
 			},
 		},
 	},
+	{
+		-- uv integration
+		"benomahony/uv.nvim",
+		opts = {
+			picker_integration = true,
+		},
+	},
 }
