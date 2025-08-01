@@ -21,7 +21,8 @@ return {
 		-- uv integration
 		"benomahony/uv.nvim",
 		opts = {
-			picker_integration = true,
+			picker_integration = false,
+			keymaps = false,
 		},
 	},
 }
