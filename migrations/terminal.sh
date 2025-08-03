@@ -3,11 +3,6 @@ if ! command -v starship &>/dev/null; then
     yay -S --noconfirm --needed starship
 fi
 
-if ! command -v tmux &>/dev/null; then
-    echo "Installing tmux"
-    yay -S --noconfirm --needed tmux
-fi
-
 # Add my custom nvim plugins
 if [ ! -f ~/.config/nvim/lua/plugins/custom.lua ]; then
     cat >~/.config/nvim/lua/plugins/custom.lua <<'EOF'
