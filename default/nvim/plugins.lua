@@ -18,11 +18,27 @@ return {
 		},
 	},
 	{
-		-- uv integration
-		"benomahony/uv.nvim",
+		"GustavEikaas/easy-dotnet.nvim",
+		dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" },
+		config = function()
+			require("easy-dotnet").setup()
+		end,
+	},
+	{
+		"williamboman/mason.nvim",
+		opts = function(_, opts)
+			opts.registries = {
+				"github:mason-org/mason-registry",
+				"github:Crashdummyy/mason-registry",
+			}
+		end,
+	},
+	{
+		"seblyng/roslyn.nvim",
+		---@module 'roslyn.config'
+		---@type RoslynNvimConfig
 		opts = {
-			picker_integration = false,
-			keymaps = false,
+			-- your configuration comes here; leave empty for default settings
 		},
 	},
 }
