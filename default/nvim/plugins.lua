@@ -1,13 +1,5 @@
 return {
 	{
-		"rmagatti/auto-session",
-		lazy = false,
-
-		opts = {
-			allowed_dirs = { "~/projects/*" },
-		},
-	},
-	{
 		"saghen/blink.cmp",
 		opts = {
 			keymap = {
