@@ -1,15 +1,5 @@
 return {
 	{
-		"saghen/blink.cmp",
-		opts = {
-			keymap = {
-				preset = "enter",
-				["<Tab>"] = { "select_next", "fallback" },
-				["<S-Tab>"] = { "select_prev", "fallback" },
-			},
-		},
-	},
-	{
 		"GustavEikaas/easy-dotnet.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
