@@ -1,6 +1,4 @@
-export PATH="$HOME/.local/share/omarchy-overrides/bin:$HOME/.dotnet/tools/:$PATH"
-
-export DOTNET_CLI_TELEMETRY_OPTOUT=1
+export PATH="$HOME/.local/share/omarchy-overrides/bin:$PATH"
 
 bind -x '"\C-f":"project-finder"'
 
