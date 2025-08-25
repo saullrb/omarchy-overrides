@@ -10,18 +10,18 @@ for app in \
   "Google Photos" \
   "HEY" \
   "X" \
-  "YouTube"; do
+  "YouTube" \
+  "Zoom"; do
   web2app-remove "$app" 2>/dev/null
 done
 
 for pkg in \
-  spotify \
-  1password-cli \
   1password-beta \
-  xournalpp \
-  typora \
+  1password-cli \
   signal-desktop \
-  zoom; do
+  spotify \
+  typora \
+  xournalpp; do
 
   if pacman -Qq "$pkg" &>/dev/null; then
     echo "Removing $pkg..."
