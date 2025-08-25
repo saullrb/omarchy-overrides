@@ -28,3 +28,5 @@ for pkg in \
 
   updatedb
 done
+
+rm -f "$HOME/.local/share/applications/typora.desktop"
