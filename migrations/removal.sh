@@ -21,8 +21,10 @@ for pkg in \
   typora \
   xournalpp; do
 
-  if pacman -Qq "$pkg" &>/dev/null; then
+  if pacman -Qqe "$pkg" &>/dev/null; then
     echo "Removing $pkg..."
     yay -Rns --noconfirm "$pkg"
   fi
+
+  updatedb
 done
