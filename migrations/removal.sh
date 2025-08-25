@@ -25,8 +25,6 @@ for pkg in \
     echo "Removing $pkg..."
     yay -Rns --noconfirm "$pkg"
   fi
-
-  updatedb
 done
 
 rm -f "$HOME/.local/share/applications/typora.desktop"
