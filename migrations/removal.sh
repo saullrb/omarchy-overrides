@@ -10,7 +10,7 @@ for app in \
   "X" \
   "YouTube" \
   "Zoom"; do
-  omarchyt-webapp-remove "$app"
+  omarchy-webapp-remove "$app"
 done
 
 for pkg in \
