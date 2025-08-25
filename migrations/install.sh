@@ -16,8 +16,3 @@ if [ ! -f "$HOME/.local/share/applications/Proton Mail.desktop" ]; then
   echo "Adding Proton Mail webapp"
   web2app 'Proton Mail' https://mail.proton.me https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/proton-mail.png
 fi
-
-if ! command -v starship &>/dev/null; then
-  echo "Installing starship"
-  yay -S --noconfirm --needed starship
-fi
