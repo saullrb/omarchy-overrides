@@ -21,5 +21,8 @@ for pkg in \
   typora \
   xournalpp; do
 
-  omarchy-pkg-remove "$pkg"
+  if pacman -Qq "$pkg" &>/dev/null; then
+    echo "Removing $pkg..."
+    yay -Rns --noconfirm "$pkg"
+  fi
 done
