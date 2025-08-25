@@ -1,7 +1,5 @@
 echo "Removing some apps"
 
-source ~/.local/share/omarchy/default/bash/functions
-
 for app in \
   "Basecamp" \
   "GitHub" \
@@ -12,7 +10,7 @@ for app in \
   "X" \
   "YouTube" \
   "Zoom"; do
-  web2app-remove "$app" 2>/dev/null
+  omarchyt-webapp-remove "$app"
 done
 
 for pkg in \
@@ -23,12 +21,5 @@ for pkg in \
   typora \
   xournalpp; do
 
-  if pacman -Qq "$pkg" &>/dev/null; then
-    echo "Removing $pkg..."
-    yay -Rns --noconfirm "$pkg"
-  fi
+  omarchy-pkg-remove "$pkg"
 done
-
-if [ -f "$HOME/.local/share/applications/Zoom.desktop" ]; then
-  rm "$HOME/.local/share/applications/Zoom.desktop"
-fi
