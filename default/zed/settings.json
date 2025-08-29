@@ -1,0 +1,123 @@
+{
+  // ────────────────────────────────
+  // CORE BEHAVIOR
+  // ────────────────────────────────
+  "disable_ai": true,
+  "vim_mode": true,
+  "vim": {
+    "use_system_clipboard": "on_yank",
+    "toggle_relative_line_numbers": true
+  },
+
+  // ────────────────────────────────
+  // UI ELEMENTS
+  // ────────────────────────────────
+  "scrollbar": {
+    "show": "never"
+  },
+  "indent_guides": {
+    "enabled": true
+  },
+  "tabs": {
+    "file_icons": true,
+    "git_status": true
+  },
+  "tab_bar": {
+    "show_tab_bar_buttons": false,
+    "show_nav_history_buttons": false
+  },
+  "toolbar": {
+    "quick_actions": false,
+    "breadcrumbs": false
+  },
+  "project_panel": {
+    "button": false,
+    "default_width": 300,
+    "dock": "left",
+    "file_icons": true,
+    "folder_icons": true,
+    "git_status": true,
+    "scrollbar": {
+      "show": "never"
+    }
+  },
+  // ────────────────────────────────
+  // FONT & THEME
+  // ────────────────────────────────
+  "ui_font_size": 15,
+  "buffer_font_size": 12,
+  "buffer_font_family": "CaskaydiaMono Nerd Font",
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Tokyo Night"
+  },
+  // ────────────────────────────────
+  // INLAY HINTS
+  // ────────────────────────────────
+  "inlay_hints": {
+    "enabled": true,
+    "show_value_hints": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+    "show_background": false,
+    "edit_debounce_ms": 700,
+    "scroll_debounce_ms": 50,
+    "toggle_on_modifiers_press": {
+      "control": false,
+      "alt": false,
+      "shift": false,
+      "platform": false,
+      "function": false
+    }
+  },
+  // ────────────────────────────────
+  // TELEMETRY
+  // ────────────────────────────────
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  // ────────────────────────────────
+  // LANGUAGE SERVERS (ASSOCIATIONS)
+  // ────────────────────────────────
+  "languages": {
+    "Elixir": {
+      "language_servers": [
+        "elixir-ls",
+        "tailwindcss-language-server",
+        "emmet-language-server"
+      ]
+    },
+    "HEEX": {
+      "language_servers": [
+        "elixir-ls",
+        "tailwindcss-language-server",
+        "emmet-language-server"
+      ]
+    }
+  },
+  // ────────────────────────────────
+  // LSP SETTINGS (CONFIGURATION)
+  // ────────────────────────────────
+  "lsp": {
+    "elixir-ls": {
+      "settings": {
+        "dialyzerEnabled": true,
+        "incrementalDialyzer": true,
+        "fetchDeps": true,
+        "suggestSpecs": true,
+        "enableTestLenses": true
+      }
+    },
+    "tailwindcss-language-server": {
+      "settings": {
+        "includeLanguages": {
+          "heex": "html",
+          "Elixir": "html"
+        }
+      }
+    }
+  }
+}

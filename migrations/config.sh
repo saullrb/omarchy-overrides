@@ -26,3 +26,10 @@ if [ ! -f "$HOME/.config/mpv/scripts/autoload.lua" ]; then
   mkdir -p ~/.config/mpv/scripts
   curl -Lo ~/.config/mpv/scripts/autoload.lua https://raw.githubusercontent.com/mpv-player/mpv/master/TOOLS/lua/autoload.lua
 fi
+
+# Ensure zed config symlink
+if [ ! -L "$HOME/.config/zed" ]; then
+  echo "Linking zed config"
+  rm -rf "$HOME/.config/zed"
+  ln -s "$HOME/.local/share/omarchy-overrides/default/zed" "$HOME/.config/zed"
+fi

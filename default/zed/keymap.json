@@ -1,0 +1,170 @@
+[
+  // ────────────────────────────────
+  // TERMINAL
+  // ────────────────────────────────
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-/": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      "ctrl-/": "workspace::ToggleBottomDock"
+    }
+  },
+
+  // ────────────────────────────────
+  // WINDOW NAVIGATION / PANE MOTIONS
+  // ────────────────────────────────
+  {
+    "context": "Dock || Terminal || Editor",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !VimObject",
+    "bindings": {
+      "shift-h": "pane::ActivatePreviousItem",
+      "shift-l": "pane::ActivateNextItem"
+    }
+  },
+
+  // ────────────────────────────────
+  // GIT PANEL
+  // ────────────────────────────────
+  {
+    "context": "GitPanel",
+    "bindings": {
+      "q": "git_panel::Close"
+    }
+  },
+
+  // ────────────────────────────────
+  // AGENT PANEL (AI Assistant)
+  // ────────────────────────────────
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "ctrl-\\": "workspace::ToggleRightDock"
+    }
+  },
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      "ctrl-\\": "workspace::ToggleRightDock",
+      "space a e": "assistant::InlineAssist"
+    }
+  },
+
+  // ────────────────────────────────
+  // PROJECT / FILE PANEL
+  // ────────────────────────────────
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "a": "project_panel::NewFile",
+      "A": "project_panel::NewDirectory",
+      "r": "project_panel::Rename",
+      "d": "project_panel::Delete",
+      "x": "project_panel::Cut",
+      "c": "project_panel::Copy",
+      "p": "project_panel::Paste",
+      "q": "workspace::ToggleLeftDock",
+      "space e": "workspace::ToggleLeftDock",
+      ":": "command_palette::Toggle",
+      "%": "project_panel::NewFile",
+      "/": "project_panel::NewSearchInDirectory",
+      "enter": "project_panel::OpenPermanent",
+      "escape": "project_panel::ToggleFocus",
+      "h": "project_panel::CollapseSelectedEntry",
+      "j": "menu::SelectNext",
+      "k": "menu::SelectPrevious",
+      "l": "project_panel::ExpandSelectedEntry",
+      "o": "project_panel::OpenPermanent",
+      "shift-d": "project_panel::Delete",
+      "shift-r": "project_panel::Rename",
+      "t": "project_panel::OpenPermanent",
+      "v": "project_panel::OpenPermanent",
+      "shift-g": "menu::SelectLast",
+      "g g": "menu::SelectFirst",
+      "-": "project_panel::SelectParent",
+      "ctrl-6": "pane::AlternateFile"
+    }
+  },
+
+  // ────────────────────────────────
+  // EMPTY PANE / SHARED SCREEN
+  // ────────────────────────────────
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      "space space": "file_finder::Toggle",
+      "space f n": "workspace::NewFile",
+      "space s g": "workspace::NewSearch"
+    }
+  },
+
+  // ────────────────────────────────
+  // EDITOR (GENERAL)
+  // ────────────────────────────────
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-s": "workspace::Save"
+    }
+  },
+
+  // ────────────────────────────────
+  // EDITOR (VIM MODE SPECIFIC)
+  // ────────────────────────────────
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      // Markdown
+      "space m p": "markdown::OpenPreview",
+      "space m P": "markdown::OpenPreviewToTheSide",
+      // Projects
+      "space f p": "projects::OpenRecent",
+      // Buffers
+      "space 1": ["pane::ActivateItem", 0],
+      "space 2": ["pane::ActivateItem", 1],
+      "space 3": ["pane::ActivateItem", 2],
+      "space 4": ["pane::ActivateItem", 3],
+      "space 5": ["pane::ActivateItem", 4],
+      "space 6": ["pane::ActivateItem", 5],
+      "space 7": ["pane::ActivateItem", 6],
+      "space 8": ["pane::ActivateItem", 7],
+      "space 9": ["pane::ActivateItem", 8],
+      "space 0": "pane::ActivateLastItem",
+      "space ,": "tab_switcher::Toggle",
+      "space b d": "pane::CloseActiveItem",
+      "space b o": "pane::CloseOtherItems",
+      // Search
+      "space /": "workspace::NewSearch",
+      // LSP & Code actions
+      "space c a": "editor::ToggleCodeActions",
+      "space c f": "editor::Format",
+      // File explorer
+      "space e": "workspace::ToggleLeftDock",
+      // File finder
+      "space space": "file_finder::Toggle",
+      // Window management
+      "space -": "pane::SplitDown",
+      "space |": "pane::SplitRight"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !VimObject",
+    "bindings": {
+      "alt-j": "editor::MoveLineDown",
+      "alt-k": "editor::MoveLineUp"
+    }
+  }
+]
+
