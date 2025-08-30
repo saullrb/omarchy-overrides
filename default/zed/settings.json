@@ -81,44 +81,24 @@
     "metrics": false
   },
   // ────────────────────────────────
-  // LANGUAGE SERVERS (ASSOCIATIONS)
+  // LANGUAGE SERVERS
   // ────────────────────────────────
   "languages": {
     "Elixir": {
       "language_servers": [
-        "elixir-ls",
-        "tailwindcss-language-server",
-        "emmet-language-server"
+        "expert",
+        "emmet-language-server",
+        "!elixir-ls",
+        "!next-ls",
+        "!lexical"
       ]
     },
     "HEEX": {
       "language_servers": [
-        "elixir-ls",
+        "expert",
         "tailwindcss-language-server",
         "emmet-language-server"
       ]
-    }
-  },
-  // ────────────────────────────────
-  // LSP SETTINGS (CONFIGURATION)
-  // ────────────────────────────────
-  "lsp": {
-    "elixir-ls": {
-      "settings": {
-        "dialyzerEnabled": true,
-        "incrementalDialyzer": true,
-        "fetchDeps": true,
-        "suggestSpecs": true,
-        "enableTestLenses": true
-      }
-    },
-    "tailwindcss-language-server": {
-      "settings": {
-        "includeLanguages": {
-          "heex": "html",
-          "Elixir": "html"
-        }
-      }
     }
   }
 }
