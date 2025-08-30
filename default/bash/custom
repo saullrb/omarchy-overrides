@@ -7,4 +7,3 @@ alias oo="omarchy-override"
 alias glogy="git log --since='yesterday.midnight' --until='midnight' --all --no-merges --oneline --author=saullrb@proton.me"
 alias z="zeditor"
 
-eval "$(starship init bash)"
