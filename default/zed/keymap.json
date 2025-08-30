@@ -14,7 +14,6 @@
       "ctrl-/": "workspace::ToggleBottomDock"
     }
   },
-
   // ────────────────────────────────
   // WINDOW NAVIGATION / PANE MOTIONS
   // ────────────────────────────────
@@ -34,7 +33,6 @@
       "shift-l": "pane::ActivateNextItem"
     }
   },
-
   // ────────────────────────────────
   // GIT PANEL
   // ────────────────────────────────
@@ -44,7 +42,6 @@
       "q": "git_panel::Close"
     }
   },
-
   // ────────────────────────────────
   // AGENT PANEL (AI Assistant)
   // ────────────────────────────────
@@ -61,7 +58,6 @@
       "space a e": "assistant::InlineAssist"
     }
   },
-
   // ────────────────────────────────
   // PROJECT / FILE PANEL
   // ────────────────────────────────
@@ -73,7 +69,7 @@
       "r": "project_panel::Rename",
       "d": "project_panel::Delete",
       "x": "project_panel::Cut",
-      "c": "project_panel::Copy",
+      "y": "project_panel::Copy",
       "p": "project_panel::Paste",
       "q": "workspace::ToggleLeftDock",
       "space e": "workspace::ToggleLeftDock",
@@ -97,7 +93,6 @@
       "ctrl-6": "pane::AlternateFile"
     }
   },
-
   // ────────────────────────────────
   // EMPTY PANE / SHARED SCREEN
   // ────────────────────────────────
@@ -109,7 +104,6 @@
       "space s g": "workspace::NewSearch"
     }
   },
-
   // ────────────────────────────────
   // EDITOR (GENERAL)
   // ────────────────────────────────
@@ -119,7 +113,6 @@
       "ctrl-s": "workspace::Save"
     }
   },
-
   // ────────────────────────────────
   // EDITOR (VIM MODE SPECIFIC)
   // ────────────────────────────────
@@ -132,15 +125,42 @@
       // Projects
       "space f p": "projects::OpenRecent",
       // Buffers
-      "space 1": ["pane::ActivateItem", 0],
-      "space 2": ["pane::ActivateItem", 1],
-      "space 3": ["pane::ActivateItem", 2],
-      "space 4": ["pane::ActivateItem", 3],
-      "space 5": ["pane::ActivateItem", 4],
-      "space 6": ["pane::ActivateItem", 5],
-      "space 7": ["pane::ActivateItem", 6],
-      "space 8": ["pane::ActivateItem", 7],
-      "space 9": ["pane::ActivateItem", 8],
+      "space 1": [
+        "pane::ActivateItem",
+        0
+      ],
+      "space 2": [
+        "pane::ActivateItem",
+        1
+      ],
+      "space 3": [
+        "pane::ActivateItem",
+        2
+      ],
+      "space 4": [
+        "pane::ActivateItem",
+        3
+      ],
+      "space 5": [
+        "pane::ActivateItem",
+        4
+      ],
+      "space 6": [
+        "pane::ActivateItem",
+        5
+      ],
+      "space 7": [
+        "pane::ActivateItem",
+        6
+      ],
+      "space 8": [
+        "pane::ActivateItem",
+        7
+      ],
+      "space 9": [
+        "pane::ActivateItem",
+        8
+      ],
       "space 0": "pane::ActivateLastItem",
       "space ,": "tab_switcher::Toggle",
       "space b d": "pane::CloseActiveItem",
@@ -167,4 +187,3 @@
     }
   }
 ]
-
