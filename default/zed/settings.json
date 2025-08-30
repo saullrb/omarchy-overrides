@@ -52,6 +52,7 @@
     "light": "One Light",
     "dark": "Tokyo Night"
   },
+  "cursor_blink": false,
   // ────────────────────────────────
   // INLAY HINTS
   // ────────────────────────────────
