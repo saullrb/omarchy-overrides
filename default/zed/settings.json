@@ -42,8 +42,8 @@
   // ────────────────────────────────
   // FONT & THEME
   // ────────────────────────────────
-  "ui_font_size": 15,
-  "buffer_font_size": 12,
+  "ui_font_size": 14,
+  "buffer_font_size": 11,
   "buffer_font_family": "CaskaydiaMono Nerd Font",
   "theme": {
     "mode": "dark",
