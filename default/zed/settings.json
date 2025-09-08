@@ -103,7 +103,6 @@
     },
     "HEEX": {
       "language_servers": [
-        "expert",
         "tailwindcss-language-server",
         "emmet-language-server"
       ]
