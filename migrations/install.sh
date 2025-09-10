@@ -6,4 +6,4 @@ omarchy-webapp-install Discord https://discord.com/app https://cdn.jsdelivr.net/
 
 omarchy-webapp-install 'Proton Mail' https://mail.proton.me https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/proton-mail.png
 
-yay -S --no-confirm zed
+yay -S --noconfirm zed
